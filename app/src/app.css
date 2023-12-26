@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Amsterdam';
+    src: url($lib/fonts/Amsterdam.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Crimson Pro', serif;
     font-size: 18px;
+    color: #474942;
 }
 
 .container {
@@ -21,24 +30,26 @@ body {
 
 .button {
     background: #ce8169;
-    padding: 0.75rem 1.25rem;
+    padding: 1rem;
     text-decoration: none;
     border: none;
-    color: black;
-    font-size: 0.8rem;
+    font-size: 18px;
     text-transform: uppercase;
+    font-family: 'Crimson Pro', serif;
+    font-weight: bold;
 }
 
 h1 {
-    font-family: 'Luxurious Script', cursive;
-    font-size: 6rem;
-    line-height: 0.75;
-    margin: 0;
-    padding: 0;
-    transform: rotate(-30deg);
-    margin-top: -1rem;
-    margin-left: -1rem;
-    margin-bottom: 6rem;
+    font-family: 'Amsterdam', cursive;
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 1rem;
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
 }
 
 ul {
