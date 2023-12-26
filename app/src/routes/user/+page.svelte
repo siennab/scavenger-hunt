@@ -9,6 +9,6 @@
     let name = '';
 
     let submitName = (name) => {
-        window.localStorage.setItem('sh-playerName', name );
+       // window.localStorage.setItem('sh-playerName', name );
     }
 </script>
