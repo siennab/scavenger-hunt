@@ -1,4 +1,4 @@
-import{s as z,n as b}from"../chunks/scheduler.sAJ_Y8Hb.js";import{S as P,i as S,g as u,s as c,h,y as p,c as v,a as n,f as s}from"../chunks/index.be9lbgTe.js";import"../chunks/paths.M0D5k_XU.js";function H(q){let l,_="The Forgotten Speakeasy",f,a,g=`Welcome, intrepid explorers, to a once lively speakeasy turned silent
+import{s as z,n as b}from"../chunks/scheduler.sAJ_Y8Hb.js";import{S as P,i as S,g as u,s as c,h,y as p,c as v,a as n,f as s}from"../chunks/index.be9lbgTe.js";import"../chunks/paths.ByvnvyK2.js";function H(q){let l,_="The Forgotten Speakeasy",f,a,g=`Welcome, intrepid explorers, to a once lively speakeasy turned silent
     sanctuary. The challenge? Find unique treasures hidden within these walls,
     but here's the twist – you must be the sole discoverer of each prize.`,m,i,T=`Amidst the echoes of a bygone era, your mission is clear. Navigate the
     shadows, sift through forgotten corners, and uncover treasures others may
