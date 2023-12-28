@@ -1,14 +1,23 @@
 <h2>Riddles</h2>
+{#each riddles as item}
+<center>
+    <button class="button" on:click="{() => {window.location.href = `/riddle/${item.id}`}}">{item.copy}</button>
+    <br /> <br />
+</center>
+{/each}
+
 
 <script>
-    let riddles = [
-        {
-            copy: "They just wanna have fun",
-            id: 1
-        }, 
-        {
-            copy: 'Treasurein treasure boxes',
-            id: 2
-        }
-    ];
+    import { onMount } from "svelte";
+
+    let riddles = [];
+
+    onMount(() => {
+        fetch('/riddles.json')
+            .then(r => r.json())
+            .then(data => {
+                riddles = data.riddles;
+            });
+    });
+
 </script>

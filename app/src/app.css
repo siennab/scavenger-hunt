@@ -21,11 +21,11 @@ body {
     background-image: url($lib/images/background.png);
     background-size: cover;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .container-inner {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
 }
 
 .button {
