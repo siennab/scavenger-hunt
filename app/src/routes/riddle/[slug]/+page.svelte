@@ -39,12 +39,16 @@
             answerId: answer,
             questionId: data.slug,
         });
+
+        window.location.href = `/riddles/`;
     }
 </script>
 
 {#if activeRiddle}
-    <h2>{activeRiddle.copy}</h2>
-
+<center>   
+     <h2>{activeRiddle.copy}</h2>
+    <label for="answer">Enter the number you found below</label><br /><br />
     <input type="number" bind:value={answer} />
-    <button class="button" on:click={updateAnswer()}> Submit</button>
+    <button class="button" on:click={updateAnswer}>&check;</button>
+</center>
 {/if}

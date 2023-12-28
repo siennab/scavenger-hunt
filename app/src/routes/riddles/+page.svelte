@@ -2,7 +2,6 @@
 {#each riddles as item}
 <center>
     <button class="button" on:click="{() => {window.location.href = `/riddle/${item.id}`}}">{item.copy}</button>
-    <br /> <br />
 </center>
 {/each}
 
@@ -21,3 +20,11 @@
     });
 
 </script>
+
+<style>
+    .button {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+</style>

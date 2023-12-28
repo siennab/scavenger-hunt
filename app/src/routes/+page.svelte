@@ -1,4 +1,4 @@
-<h1>Forgotten <br /> &nbsp; &nbsp; &nbsp; Speakeasy</h1>
+<h1>The Forgotten Speakeasy</h1>
     <p>
         Welcome, intrepid explorers, to a once lively speakeasy turned silent sanctuary. The challenge? Find unique treasures hidden within these walls, but here's the twist – ßßyou must be the sole discoverer of each prize.</p>
         
@@ -6,4 +6,7 @@
         
       <p> No ordinary scavenger hunt, this clandestine quest demands subtlety and strategy. The artifacts are numerous, but victory lies in singularity. Will you unravel the secrets left behind in this clandestine haven? The stage is set; let the silent hunt begin.</p>
     <br />
-        <a href="/user" class="button">Get Started!</a>
+
+    <center>
+        <a href="/user" class="button">Get Started</a>
+    </center>

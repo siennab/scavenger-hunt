@@ -2,7 +2,7 @@
 <center>
     <h2>Your Name</h2>
     <input type="text" bind:value={name}  />
-    <a class="button" onclick="{() => {submitName(name); window.location.href='/riddles' }}"> Next</a>
+    <a class="button" on:click="{submitName(name)}"> Next</a>
 </center>
 
 <script>
@@ -14,6 +14,7 @@
     let submitName = (name) => {
         if(browser) {
             window?.localStorage.setItem('sh-playerName', name );
+            window.location.href='/riddles';
         }
     }
 
