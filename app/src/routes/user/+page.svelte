@@ -14,7 +14,7 @@
     let submitName = (name) => {
         if(browser) {
             window?.localStorage.setItem('sh-playerName', name );
-            window.location.href='/riddles';
+            window.location.href='riddles';
         }
     }
 

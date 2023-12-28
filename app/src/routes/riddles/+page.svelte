@@ -1,7 +1,7 @@
 <h2>Riddles</h2>
 {#each riddles as item}
 <center>
-    <button class="button" on:click="{() => {window.location.href = `/riddle/${item.id}`}}">{item.copy}</button>
+    <button class="button" on:click="{() => {window.location.href = `riddle/${item.id}`}}">{item.copy}</button>
 </center>
 {/each}
 

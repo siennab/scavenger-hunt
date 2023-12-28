@@ -9,8 +9,9 @@ export default {
 			assets: '../docs',
 			fallback: undefined,
 			precompress: false,
-			strict: true,
-			trailingSlash: 'always',
-		})
+		}),
+		paths: {
+			base: process.env.NODE_ENV === "production" ? "/scavenger-hunt" : "",
+		},
 	}
 };

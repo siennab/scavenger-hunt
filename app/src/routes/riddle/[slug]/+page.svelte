@@ -40,7 +40,7 @@
             questionId: data.slug,
         });
 
-        window.location.href = `/riddles/`;
+        window.location.href = `riddles/`;
     }
 </script>
 
