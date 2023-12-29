@@ -50,7 +50,8 @@ body {
 
 h1 {
     font-family: 'Amsterdam', cursive;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
     text-align: center;
 }
 

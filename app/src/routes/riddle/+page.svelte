@@ -3,8 +3,10 @@
     import { beforeUpdate, onMount } from "svelte";
     import { initializeApp } from "firebase/app";
     import { getFirestore, addDoc, collection } from "firebase/firestore";
+    import { base } from "$app/paths";
+    import riddles from "../../config/riddles.js";
 
-    let riddles = [];
+    let rdls = riddles;
     let activeRiddle = null;
     let db = null;
     let answer = null;
@@ -23,27 +25,21 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         db = getFirestore(app);
-
-        fetch("/riddles.json")
-            .then((r) => r.json())
-            .then((res) => { 
-                riddles = res.riddles;
-                activeRiddle = riddles.find((r) => r.id == query.q);
-            });
+        activeRiddle = rdls.find((r) => r.id == query);
     });
 
     beforeUpdate(() => {
-        query = $page.url.searchParams.get('q')
+        query = $page.url.searchParams.get('q');
     });
 
     async function updateAnswer() {
         await addDoc(collection(db, "user-answers"), {
             name: window.localStorage.getItem("sh-playerName"),
             answerId: answer,
-            questionId: query.q,
+            questionId: query,
         });
 
-        window.location.href = `riddles/`;
+        window.location.href = `${base}/riddles/`;
     }
 </script>
 
