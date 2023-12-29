@@ -19,10 +19,10 @@ body {
     width: 100%;
     margin: 0 auto;
     background-image: url($lib/images/background.png);
-    background-size: cover;
     min-height: 100vh;
+    background-size: 120%, 120%;
     overflow: auto;
-    background-attachment: fixed;
+    animation: animatedBackground 30s linear infinite;
 }
 
 .container-inner {
@@ -53,6 +53,7 @@ h1 {
     font-size: 1.35rem;
     margin-bottom: 0.25rem;
     text-align: center;
+    margin-top: 0;
 }
 
 input[type=text], input[type=number] {
@@ -78,3 +79,25 @@ ul {
 li {
     margin-bottom: 0.5rem;
 }
+
+
+@keyframes animatedBackground {
+    0% {
+      background-size: 100%, 100%;
+       }
+    25% {
+      background-size: 120%, 120%;
+    }
+
+    50% {
+        background-size: 150%, 150%;
+    }
+
+    75% {
+        background-size: 120%, 120%;
+    }
+
+    100% {
+        background-size: 110%, 110%;
+    }
+  }
