@@ -1,0 +1,9 @@
+import{s as P,n as b}from"../chunks/scheduler.sAJ_Y8Hb.js";import{S,i as z,g as u,s as c,h,y as f,c as m,a as n,f as s}from"../chunks/index.be9lbgTe.js";import{b as H}from"../chunks/paths.ibTqbEhs.js";function N(q){let a,_="The Forgotten Speakeasy",p,l,g=`Welcome, intrepid explorers, to a once lively speakeasy turned silent
+    sanctuary. The challenge? Find unique treasures hidden within these walls,
+    but here's the twist – you must be the sole discoverer of each prize.`,v,i,T=`Amidst the echoes of a bygone era, your mission is clear. Navigate the
+    shadows, sift through forgotten corners, and uncover treasures others may
+    overlook. It's a race against your fellow seekers, a test of cunning and
+    observation.`,d,r,w=`No ordinary scavenger hunt, this clandestine quest demands subtlety and
+    strategy. The artifacts are numerous, but victory lies in singularity. Will
+    you unravel the secrets left behind in this clandestine haven? The stage is
+    set; let the silent hunt begin.`,y,x,C,o,k=`<a href="${H}/user" class="button">Get Started</a>`;return{c(){a=u("h1"),a.textContent=_,p=c(),l=u("p"),l.textContent=g,v=c(),i=u("p"),i.textContent=T,d=c(),r=u("p"),r.textContent=w,y=c(),x=u("br"),C=c(),o=u("center"),o.innerHTML=k},l(e){a=h(e,"H1",{"data-svelte-h":!0}),f(a)!=="svelte-q9sr6h"&&(a.textContent=_),p=m(e),l=h(e,"P",{"data-svelte-h":!0}),f(l)!=="svelte-cw1h1b"&&(l.textContent=g),v=m(e),i=h(e,"P",{"data-svelte-h":!0}),f(i)!=="svelte-1lnucgr"&&(i.textContent=T),d=m(e),r=h(e,"P",{"data-svelte-h":!0}),f(r)!=="svelte-1n6zz4y"&&(r.textContent=w),y=m(e),x=h(e,"BR",{}),C=m(e),o=h(e,"CENTER",{"data-svelte-h":!0}),f(o)!=="svelte-m6t8ai"&&(o.innerHTML=k)},m(e,t){n(e,a,t),n(e,p,t),n(e,l,t),n(e,v,t),n(e,i,t),n(e,d,t),n(e,r,t),n(e,y,t),n(e,x,t),n(e,C,t),n(e,o,t)},p:b,i:b,o:b,d(e){e&&(s(a),s(p),s(l),s(v),s(i),s(d),s(r),s(y),s(x),s(C),s(o))}}}class M extends S{constructor(a){super(),z(this,a,null,N,P,{})}}export{M as component};

@@ -25,5 +25,5 @@
 <br />
 
 <center>
-    <a href="user" class="button">Get Started</a>
+    <a href="{base}/user" class="button">Get Started</a>
 </center>
