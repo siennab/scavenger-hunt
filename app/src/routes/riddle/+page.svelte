@@ -49,7 +49,8 @@
 </script>
 
 {#if activeRiddle}
-<center>   
+<center class="fade-in">   
+    <a class="inline" href={`${base}/riddles/`}>&lt; Go Back</a>
      <h2>{activeRiddle.copy}</h2>
     <label for="answer">Enter the number of the label on the item you found</label><br /><br />
     <input type="number" bind:value={answer} />

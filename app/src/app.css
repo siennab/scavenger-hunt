@@ -15,12 +15,12 @@ body {
 }
 
 .background {
-    max-width: 400px;
+    max-width: 480px;
     width: 100%;
     margin: 0 auto;
     background-image: url($lib/images/background.png);
     min-height: 100vh;
-    background-size: 120%, 120%;
+    background-size: auto 100%;
     overflow: auto;
     animation: animatedBackground 30s linear infinite;
 }
@@ -48,6 +48,11 @@ body {
     margin: 1rem 0;
 }
 
+
+.inline {
+    text-decoration: none;
+    color:#779888;
+}
 h1 {
     font-family: 'Amsterdam', cursive;
     font-size: 1.35rem;
@@ -80,24 +85,35 @@ li {
     margin-bottom: 0.5rem;
 }
 
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 
 @keyframes animatedBackground {
     0% {
-      background-size: 100%, 100%;
-       }
-    25% {
-      background-size: 120%, 120%;
+        background-size: auto 100%;
     }
 
     50% {
-        background-size: 150%, 150%;
-    }
-
-    75% {
-        background-size: 120%, 120%;
+        background-size: auto 120%;
     }
 
     100% {
-        background-size: 110%, 110%;
+        background-size: auto 100%;
     }
   }

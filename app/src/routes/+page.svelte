@@ -1,8 +1,26 @@
 <script>
     import { base } from "$app/paths";
+    import { onMount } from "svelte";
+
+    let showContent = false;
+
+    onMount(() => {
+        const username = localStorage.getItem("sh-playerName");
+        if (username) {
+            window.location.href = `${base}/riddles`;
+        }
+
+        setTimeout(() => {
+            showContent = true;
+        }, 500)
+
+    });
 </script>
 
+{#if showContent}
+<div class="fade-in">
 <h1>The Forgotten Speakeasy</h1>
+
 <p>
     Welcome, intrepid explorers, to a once lively speakeasy turned silent
     sanctuary. The challenge? Find unique treasures hidden within these walls,
@@ -27,3 +45,5 @@
 <center>
     <a href="{base}/user" class="button">Get Started</a>
 </center>
+</div>
+{/if}

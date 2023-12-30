@@ -1,5 +1,6 @@
 
-<center>
+<center class="fade-in">
+    <h1>The Forgotten Speakeasy</h1>
     <h2>Your Name</h2>
     <input type="text" bind:value={name}  />
     <button class="button" on:click="{submitName(name)}">Next</button>
