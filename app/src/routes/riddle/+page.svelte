@@ -11,6 +11,7 @@
     let db = null;
     let answer = null;
     let query = null;
+    let error = null;
 
     onMount(() => {
         const firebaseConfig = {
@@ -33,6 +34,10 @@
     });
 
     async function updateAnswer() {
+        if(!activeRiddle.valid_ids.includes(answer)) {
+            error = "That's not a valid number! Try again.";
+            return;
+        }
         await addDoc(collection(db, "user-answers"), {
             name: window.localStorage.getItem("sh-playerName"),
             answerId: answer,
@@ -46,8 +51,12 @@
 {#if activeRiddle}
 <center>   
      <h2>{activeRiddle.copy}</h2>
-    <label for="answer">Enter the number you found below</label><br /><br />
+    <label for="answer">Enter the number of the label on the item you found</label><br /><br />
     <input type="number" bind:value={answer} />
+    {#if error}
+    <br />
+    <small><br />{error}</small>
+    {/if}
     <button class="button" on:click={updateAnswer}>&check;</button>
 </center>
 {/if}
