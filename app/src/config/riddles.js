@@ -20,11 +20,11 @@ export default [
         "valid_ids": [5, 43]
     },
     {
-        "copy": " With hands that circle in rhythmic rhyme, what am I, marking the dance of time?",
+        "copy": "With hands that circle in rhythmic rhyme, what am I, marking the dance of time?",
         "id": 5,
         "valid_ids": [3, 4, 9, 8, 2]
     }, {
-        "copy": " On hurried paths, forgotten with haste, what am I, abandoned windows to the past?",
+        "copy": "I perch on the nose, enhancing your sight. Frames on my temples, I help secrets come to light.",
         "id": 6,
         "valid_ids": [2, 9, 8, 5]
     }, {

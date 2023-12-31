@@ -8,6 +8,7 @@
     let db = null;
     let answeredRiddleIds = [];
     let loaded = false;
+    let countdown = "0:0:0";
  
 
     onMount(() => {
@@ -33,12 +34,31 @@
                 loaded = true;
             });
         }
+
+        countdownToMidnight();
     });
 
     async function getUserAnswers(userName) {
         return getDocs(query(collection(db, "user-answers"), where('name', '==', userName))).then((res) => {
             return res.docs.map((doc) => doc.data());
         });
+    }
+
+    function countdownToMidnight() {
+        const midnight = new Date();
+        midnight.setHours(24, 0, 0, 0);
+
+        setInterval(() => {
+            const now = new Date();
+            const timeLeft = midnight - now;
+
+            const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+            const seconds = Math.floor((timeLeft / 1000) % 60);
+
+            countdown = `${hours}:${minutes}:${seconds}`;
+        }, 1000);
+
     }
 </script>
 
@@ -57,6 +77,8 @@
         >
     </center>
 {/each}
+    <h4>{countdown} until midnight</h4>
+
 </center>
 {/if}   
 
