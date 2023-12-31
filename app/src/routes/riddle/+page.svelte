@@ -2,7 +2,7 @@
     import { page } from '$app/stores';
     import { beforeUpdate, onMount } from "svelte";
     import { initializeApp } from "firebase/app";
-    import { getFirestore, addDoc, getDocs, collection, where, query } from "firebase/firestore";
+    import { getFirestore, addDoc, getDocs, collection, where, query, updateDoc, doc } from "firebase/firestore";
     import { base } from "$app/paths";
     import riddles from "../../config/riddles.js";
 
@@ -35,7 +35,7 @@
 
     async function getSameAnswers(answer) {
         const queryParamSnapshot = await getDocs(query(collection(db, "user-answers"), where("answerId", "==", answer), where("questionId", "==", queryParam)));
-        return queryParamSnapshot.docs.map((doc) => doc.data());
+        return queryParamSnapshot.docs;
     }
 
     async function updateAnswer() {
@@ -45,12 +45,16 @@
         }
 
         const answers = await getSameAnswers(answer);
-
-        let points = 100;
-        if ( answers.length > 0 ) {
-            points = 60;
-            points = points - ((answers.length - 1) * 10);
-        }
+        
+        // Loop through all the answers and update their point values
+        for (let i = 0; i < answers.length; i++) {
+            const points = calculatePoints(answers.length + 1);
+            await updateDoc(doc(db, "user-answers", answers[i].id), {
+                points: points
+            });
+        }    
+        
+        const points = calculatePoints(answers.length + 1);
 
         await addDoc(collection(db, "user-answers"), {
             name: window.localStorage.getItem("sh-playerName"),
@@ -60,6 +64,15 @@
         });
 
         window.location.href = `${base}/riddles/`;
+    }
+
+    function calculatePoints(answerCount) {
+        let points = 100;
+        if ( answerCount > 0 ) {
+            points = 60;
+            points = points - ((answerCount - 1) * 10);
+        }
+        return points;
     }
 </script>
 
