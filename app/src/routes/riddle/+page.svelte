@@ -54,7 +54,7 @@
             });
         }    
         
-        const points = calculatePoints(answers.length + 1);
+        const points = calculatePoints(answers.length);
 
         await addDoc(collection(db, "user-answers"), {
             name: window.localStorage.getItem("sh-playerName"),
